@@ -1,3 +1,7 @@
+
+animals = ['cow', 'dog']
+moods = ['happy', 'sad', 'neutral', 'angry', 'surprised']
+
 def cow(text="Hello world!", mood="neutral"):
     """
     Make a cow say something with a specific mood.
@@ -7,8 +11,28 @@ def cow(text="Hello world!", mood="neutral"):
         mood (str): Cow's mood - 'happy', 'sad', 'neutral', 'angry', 'surprised'
     
     Returns:
-        str: ASCII art of cow with speech bubble
+        str: ASCII art of a cow speaking
     """
+    # Input validation
+    if not isinstance(text, str):
+        raise TypeError(f"text must be a string, got {type(text).__name__}")
+    
+    if not isinstance(mood, str):
+        raise TypeError(f"mood must be a string, got {type(mood).__name__}")
+    
+    # Normalize mood to lowercase
+    mood_lower = mood.lower()
+
+    # Check for value error
+    if mood_lower not in moods:
+        raise ValueError(f"Invalid mood '{mood}'. Available moods: {', '.join(moods)}")
+
+    if len(text) > 100:
+        raise ValueError(f"Text too long ({len(text)} characters). Maximum allowed: 100 characters")
+    
+    if not text.strip():
+        raise ValueError("Text cannot be empty or only whitespace")
+    
     # Define cow faces based on mood
     faces = {
         "happy": "^^",
@@ -18,17 +42,14 @@ def cow(text="Hello world!", mood="neutral"):
         "surprised": "OO"
     }
 
-    face = faces.get(mood, "oo")
-
-    # Create speech bubble
-    bubble = text
+    face = faces.get(mood_lower)
 
     # Create cow art using raw string to avoid escape sequence warnings
     cow_art = fr"""
-{bubble}
+{text}
         \   ^__^
          \  ({face})\_______
-            (__)\       )\/\
+            (__)\       )\/\\
                 ||----w |
                 ||     ||
     """
@@ -45,8 +66,28 @@ def dog(text="Hello world!", mood="neutral"):
         mood (str): Dog's mood - 'happy', 'sad', 'neutral', 'angry', 'surprised'
     
     Returns:
-        str: ASCII art of dog with speech bubble
+        str: ASCII art of a dog speaking
     """
+    # Input validation
+    if not isinstance(text, str):
+        raise TypeError(f"text must be a string, got {type(text).__name__}")
+    
+    if not isinstance(mood, str):
+        raise TypeError(f"mood must be a string, got {type(mood).__name__}")
+    
+    # Normalize mood to lowercase
+    mood_lower = mood.lower()
+
+    # Check for value error
+    if mood_lower not in moods:
+        raise ValueError(f"Invalid mood '{mood}'. Available moods: {', '.join(moods)}")
+
+    if len(text) > 100:
+        raise ValueError(f"Text too long ({len(text)} characters). Maximum allowed: 100 characters")
+    
+    if not text.strip():
+        raise ValueError("Text cannot be empty or only whitespace")
+    
     # Define dog faces based on mood
     faces = {
         "happy": "∩",
@@ -56,14 +97,12 @@ def dog(text="Hello world!", mood="neutral"):
         "surprised": "O"
     }
 
-    face = faces.get(mood, "@")
+    face = faces.get(mood_lower)
 
-    # Create speech bubble
-    bubble = text
 
     # Create dog art using raw string to avoid escape sequence warnings
     dog_art = fr"""
-{bubble}
+{text}
       \
        \   / \__
           (    {face}\\__
@@ -73,3 +112,4 @@ def dog(text="Hello world!", mood="neutral"):
 """
 
     return dog_art
+
