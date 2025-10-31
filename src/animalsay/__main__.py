@@ -3,7 +3,7 @@ In Python packages, this file called __main__.py is run when the package is run
 directly from command line, as opposed to importing it into another program.
 """
 import sys
-from animalsay.animalsay import dog, cow
+import animalsay.animalsay as animalsay
 
 
 def main():
@@ -18,8 +18,8 @@ def main():
     # Show usage information
     print("USAGE:")
     print("  From Python code:")
-    print("    from animalsay import cow, dog, [...]")
-    print("    print(dog('Hello!', mood='happy'))")
+    print("    import animalsay")
+    print("    print(animalsay.dog('Hello!', mood='happy'))")
 
     print()
     print("AVAILABLE ANIMALS: cow, dog, [...]")
@@ -28,7 +28,7 @@ def main():
     
     # Show an example using dog()
     print("EXAMPLE OUTPUT:")
-    example = dog("Hello! I'm a happy dog!", mood="happy")
+    example = animalsay.dog("Hello! I'm a happy dog!", mood="happy")
     print(example)
 
 
