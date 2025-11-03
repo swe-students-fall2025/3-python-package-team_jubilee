@@ -210,10 +210,10 @@ def sheep(text="Hello world!", mood="neutral"):
     # Create sheep art using raw string to avoid escape sequence warnings
     sheep_art = fr"""
 {text}
-        \   ____
-         \  ({face})\_______
-            (__)\       )\/\\
-                ||----w |
+        \   www,
+         \  ({face})\wwwwww
+            (__)\ wwwww)\/\,
+                ||wwwww |
                 ||     ||
     """ 
     return sheep_art
