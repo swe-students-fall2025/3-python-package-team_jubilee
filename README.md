@@ -40,14 +40,22 @@ Hello! I'm a happy dog!
 ```Bash
 git clone https://github.com/user/repository-name.git
 ```
-2. Then, use pipenv to install all dependencies.
+
+2. Change this line in Pipfile into your current Python version.
+
+```
+[requires]
+python_version = "3.10"
+```
+
+3. Then, use pipenv to install all dependencies.
 ```Bash
 pip install pipenv
 
 pipenv install --dev
 ```
 
-3. To build, run tests, or upload through twine, use pipenv to run our scripts.
+4. To build, run tests, or upload through twine, use pipenv to run our scripts.
 ```Bash
 pipenv run test
 pipenv run build
