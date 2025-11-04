@@ -22,7 +22,7 @@ def main():
     print("    print(animalsay.dog('Hello!', mood='happy'))")
 
     print()
-    print("AVAILABLE ANIMALS: cow, dog, [...]")
+    print("AVAILABLE ANIMALS: cow, dog, cat, sheep")
     print("AVAILABLE MOODS: happy, sad, neutral, angry, surprised")
     print()
     
