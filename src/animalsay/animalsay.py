@@ -160,7 +160,7 @@ def cat(text="Hello world!", mood="neutral"):
 {text}
         \    /\_/\
          \  ( {face} )
-            > ^ <
+             > ^ <
     """ 
 
     return cat_art
