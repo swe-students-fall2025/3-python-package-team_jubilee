@@ -110,6 +110,12 @@ cd 3-python-package-team_jubilee
 pip install .
 ```
 
+3. Option C - Install from real PyPI
+```bash
+pip install animalsay-jubilee
+```
+https://pypi.org/project/animalsay-jubilee/
+
 # Team Members
 - [Jasmine Zhu](https://github.com/jasminezjr)
 - [Grace He](https://github.com/gracehe04)
