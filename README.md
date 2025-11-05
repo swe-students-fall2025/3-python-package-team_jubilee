@@ -1,4 +1,4 @@
-![Workflow status](https://github.com/swe-students-fall2025/3-python-package-team_jubilee/actions/python-tests.yml/badge.svg)
+![Workflow status](https://github.com/swe-students-fall2025/3-python-package-team_jubilee/actions/workflows/python-tests.yml/badge.svg)
 
 
 # Python Package Exercise
