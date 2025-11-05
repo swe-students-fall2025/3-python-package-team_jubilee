@@ -1,6 +1,6 @@
 import sys
 import subprocess
-import animalsay.__main__ as main_module
+import src.animalsay.__main__ as main_module
 
 # Test that the main module outputs the expected introduction and example
 
