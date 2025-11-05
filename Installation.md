@@ -11,13 +11,13 @@ This guide explains how to **install**, **import**, and **use** the Python packa
 If the package has been uploaded to **TestPyPI**, install it using:
 
 ```bash
-pip install -i https://test.pypi.org/simple/ animalsay-jubilee-yl9778
+pip install -i https://test.pypi.org/simple/ animalsay-jubilee-yl9778```
 
 ####💡 Tip: Add --upgrade if you already installed an older version.
 
 pip install -i https://test.pypi.org/simple/ animalsay-jubilee-yl9778 --upgrade
 
-###🔹 Option B — Install from Source
+### 🔹 Option B — Install from Source
 
 If you have cloned the repository manually:
 
