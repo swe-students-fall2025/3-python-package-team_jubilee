@@ -3,15 +3,14 @@
 An exercise to create a Python package, build it, test it, distribute it, and use it. See [instructions](./instructions.md) for details.
 
 # Animal Say
-Make animals say things with moods in ASCII art!
-
-- AVAILABLE ANIMALS: cow, dog, cat, sheep
-- AVAILABLE MOODS: happy, sad, neutral, angry, surprised
+Animal Say is a Python package that lets animals "speak" in ASCII art with different moods! You can have a cow, dog, cat, or sheep say anything you want, in a happy, sad, neutral, angry, or surprised mood.
 
 USAGE:
 
 ```python
 import animalsay
+
+# Make a happy dog say "Hello! I'm a happy dog!"
 print(animalsay.dog("Hello! I'm a happy dog!", mood="happy"))
 ```
 
@@ -27,18 +26,41 @@ Hello! I'm a happy dog!
         /_____/   U
 ```
 
-# Team Members
-- [Jasmine Zhu](https://github.com/jasminezjr)
-- [Grace He](https://github.com/gracehe04)
-- [Vaishnavi Suresh](https://github.com/vaishnavi-suresh)
-- [Chengqi Li](https://github.com/lichengqi617)
-- [Krystal Lin](https://github.com/krystalll-0)
+# Available Animals
+- cow
+- dog
+- cat
+- sheep
 
+# Available Moods
+- happy
+- sad
+- neutral
+- angry
+- surprised
 
-# Contribution
+# Functions
+
+All animals use the same function signature:
+
+animal(test: str, mood: str = "neutral") -> str
+- text: The string message the animal will "say".
+- mood: One of the available moods (happy, sad, neutral, angry, surprised). Defaults to "neutral".
+- Returns: A string containing the ASCII art of the animal speaking the message with the selected mood.
+
+# Example:
+
+import animalsay
+
+ascii_art = animalsay.sheep("Baa! I'm surprised!", mood="surprised")
+print(ascii_art)
+
+# Contributions
+To set up the project locally: 
 1. First, clone the repository into a workspace.
 ```Bash
 git clone https://github.com/user/repository-name.git
+cd repository-name
 ```
 
 2. Change this line in Pipfile into your current Python version.
@@ -57,7 +79,16 @@ pipenv install --dev
 
 4. To build, run tests, or upload through twine, use pipenv to run our scripts.
 ```Bash
-pipenv run test
-pipenv run build
-pipenv run upload
+pipenv run test # run tests
+pipenv run build # build the package
+pipenv run upload # upload to PyPI
 ```
+
+# Team Members
+- [Jasmine Zhu](https://github.com/jasminezjr)
+- [Grace He](https://github.com/gracehe04)
+- [Vaishnavi Suresh](https://github.com/vaishnavi-suresh)
+- [Chengqi Li](https://github.com/lichengqi617)
+- [Krystal Lin](https://github.com/krystalll-0)
+
+Have fun making animals talk! 🐶🐱🐮🐑
