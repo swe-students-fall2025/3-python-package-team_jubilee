@@ -78,6 +78,7 @@ pipenv install --dev
 ```
 
 4. To build, run tests, or upload through twine, use pipenv to run our scripts.
+
 ```Bash
 pipenv run test # run tests
 pipenv run build # build the package
