@@ -3,7 +3,7 @@ name: Python package CI
 # Trigger on pull requests to main
 on:
   pull_request:
-    branches: [ pipfile-requirements ]
+    branches: [ pipfile-experiment ]
 
 jobs:
   build-and-test:
