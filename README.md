@@ -83,6 +83,28 @@ pipenv run test # run tests
 pipenv run build # build the package
 pipenv run upload # upload to PyPI
 ```
+# Installation
+
+1. Option A — Install from TestPyPI
+
+   If the package has been uploaded to **TestPyPI**, install it using:
+
+```bash
+pip install -i https://test.pypi.org/simple/ animalsay-jubilee-yl9778
+```
+#### Tip: Add --upgrade if you already installed an older version.
+```bash
+pip install -i https://test.pypi.org/simple/ animalsay-jubilee-yl9778 --upgrade
+```
+
+2. Option B — Install from Source
+
+   If you have cloned the repository manually:
+```bash
+git clone https://github.com/swe-students-fall2025/3-python-package-team_jubilee.git
+cd 3-python-package-team_jubilee
+pip install .
+```
 
 # Team Members
 - [Jasmine Zhu](https://github.com/jasminezjr)
