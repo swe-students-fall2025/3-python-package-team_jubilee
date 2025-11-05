@@ -52,12 +52,12 @@ animal(test: str, mood: str = "neutral") -> str
 - Returns: A string containing the ASCII art of the animal speaking the message with the selected mood.
 
 # Example:
-
+```python
 import animalsay
 
 ascii_art = animalsay.sheep("Baa! I'm surprised!", mood="surprised")
 print(ascii_art)
-
+```
 # Contributions
 To set up the project locally: 
 1. First, clone the repository into a workspace.
